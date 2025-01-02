@@ -1,0 +1,76 @@
+/* Container styles */
+div {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+  }
+  
+  /* Header styling */
+  h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  /* Error message styling */
+  p {
+    color: red;
+    font-size: 14px;
+    margin: 10px 0;
+  }
+  
+  /* Project list styles */
+  ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  li {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Project name and description styles */
+  li div {
+    flex-grow: 1;
+    margin-right: 20px;
+  }
+  
+  strong {
+    font-size: 18px;
+    color: #333;
+  }
+  
+  p {
+    font-size: 14px;
+    color: #777;
+  }
+  
+  /* Button styling */
+  button {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-left: 10px;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  
+  p.no-projects {
+    font-size: 16px;
+    color: #555;
+  }
+  
