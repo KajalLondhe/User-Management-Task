@@ -122,16 +122,3 @@ const getProjectsByUser = (req, res) => __awaiter(void 0, void 0, void 0, functi
     }
 });
 exports.getProjectsByUser = getProjectsByUser;
-// router.get('/', authenticateToken, async (req: Request, res: Response) => {
-//     try {
-//       const projects = await Project.find({
-//         $or: [
-//           { createdBy: req.user._id }, // User can see their own projects
-//           { createdBy: { $in: req.user.role === 'admin' ? [req.user._id] : [] } }, // Admin can see all projects
-//         ],
-//       });
-//       res.status(200).json(projects);
-//     } catch (err) {
-//       res.status(400).json({ message: 'Error fetching projects' });
-//     }
-//   });

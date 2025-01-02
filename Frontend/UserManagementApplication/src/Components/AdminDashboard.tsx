@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
-import '../CSS/AdminDashboard.css';  
+import '../CSS/AdminDashboard.css';  // Import the CSS file for styling
 
 const AdminDashboard: React.FC = () => {
   const [projects, setProjects] = useState<any[]>([]);

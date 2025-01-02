@@ -21,7 +21,6 @@ const validateSignup = (req, res, next) => {
     if (!name || !email || !password || !role) {
         return res.status(400).json({ message: 'All fields are required for registration.' });
     }
-    // Add further validation logic (e.g., regex for email, password strength)
     next();
 };
 exports.validateSignup = validateSignup;
@@ -31,13 +30,11 @@ const validateLogin = (req, res, next) => {
     if (!email || !password) {
         return res.status(400).json({ message: 'Email and password are required' });
     }
-    // Proceed to the next middleware or controller
     next();
 };
 exports.validateLogin = validateLogin;
 // Middleware to protect routes
-const protect = (req, // Use AuthenticatedRequest from the imported file
-res, next) => __awaiter(void 0, void 0, void 0, function* () {
+const protect = (req, res, next) => __awaiter(void 0, void 0, void 0, function* () {
     let token;
     if (req.headers.authorization && req.headers.authorization.startsWith('Bearer')) {
         token = req.headers.authorization.split(' ')[1];
@@ -51,7 +48,7 @@ res, next) => __awaiter(void 0, void 0, void 0, function* () {
         if (!user) {
             return res.status(404).json({ message: 'User not found' });
         }
-        req.user = { id: user.id, role: user.role }; // Attach user object
+        req.user = { id: user.id, role: user.role };
         next();
     }
     catch (error) {
@@ -60,8 +57,7 @@ res, next) => __awaiter(void 0, void 0, void 0, function* () {
 });
 exports.protect = protect;
 // Admin middleware to check if user has 'admin' role
-const admin = (req, // Use AuthenticatedRequest from the imported file
-res, next) => {
+const admin = (req, res, next) => {
     if (req.user && req.user.role === 'admin') {
         next();
     }

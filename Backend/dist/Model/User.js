@@ -62,11 +62,10 @@ const UserSchema = new mongoose_1.Schema({
     role: {
         type: String,
         required: true,
-        enum: ['user', 'admin'], // Only allow user or admin roles
+        enum: ['user', 'admin'],
         default: 'user',
     },
 }, { timestamps: true });
-// Compare entered password with stored password
 UserSchema.methods.comparePassword = function (password) {
     return __awaiter(this, void 0, void 0, function* () {
         return yield bcrypt.compare(password, this.password);

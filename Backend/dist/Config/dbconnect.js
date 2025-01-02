@@ -6,7 +6,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.dbconnection = void 0;
 const mongoose_1 = __importDefault(require("mongoose"));
 const dotenv_1 = __importDefault(require("dotenv"));
-// Load environment variables from .env file
 dotenv_1.default.config();
 // Database connection
 exports.dbconnection = mongoose_1.default
